@@ -13,14 +13,22 @@
     <h1>Analizador de textos</h1>
   </header>
   <p>Por favor, introduce tu texto en la caja</p>
-  <textarea name="user-input"></textarea>
+  <textarea id="user-input" name="user-input" onkeyup="" placeholder="Coloca aquí tu texto"></textarea>
+  <br>
+  <button id = "clean-button">Limpiar contenido</button>
+  <script>
+  function cleanContent(){
+    let content = document.getElementById('user-input');
+    content.value = '';
+  };
+  </script>
   <ul>
-    <li data-testid="word-count"></li>
-    <li data-testid="character-count"></li>
-    <li data-testid="character-no-spaces-count"></li>
-    <li data-testid="number-count"></li>
-    <li data-testid="number-sum"></li>
-    <li data-testid="word-lenght-average"></li>
+    <li data-testid="word-count" id = "word-count"> Palabras  totales: </li>
+    <li data-testid="character-count" id="character-count"> Caracteres totales: </li>
+    <li data-testid="character-no-spaces-count" id="character-no-spaces-count"> Caracteres totales (sin espacios): </li>
+    <li data-testid="number-count" id="number-count"> Cantidad de números en el texto: </li>
+    <li data-testid="number-sum" id="number-sum"> Suma de los  números en el texto: </li>
+    <li data-testid="word-length-average" id="word-length-average"> Longitud promedio de palabra: </li>
   </ul>
   <footer>Grecia Fragoso, Laboratoria DEV-010</footer>
 </body>
