@@ -2,8 +2,7 @@ import analyzer from './analyzer.js';
 //TODO: escuchar eventos del DOM e invocar  los métodos del objeto `analyzer`
 let userText = document.getElementById('user-input');
 userText.addEventListener('keyup',() => {
-    let text = userText.value
-    console.log(text)
+    let text = userText.value;
     analyzer.getWordCount(text);
     analyzer.getCharacterCount(text);
     analyzer.getCharacterCountExcludingSpaces(text);
@@ -12,7 +11,7 @@ userText.addEventListener('keyup',() => {
     analyzer.getNumberSum(text);
 })
 
-let cleanTextContent = document.getElementById('clean-button');
+let cleanTextContent = document.getElementById('reset-button');
 cleanTextContent.addEventListener('click', () => {
     userText.value = '';
 })

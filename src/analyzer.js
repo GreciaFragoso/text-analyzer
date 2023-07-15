@@ -32,12 +32,10 @@ export let analyzer = {
   getAverageWordLength: (text) => {   
     let arrayWords = text.split(' ')
     let cleanBlankSpaces = arrayWords.filter(item => item.trim() != '');
-    let arrayLength = cleanBlankSpaces.length
-    console.log(arrayLength)
+    let arrayLength = cleanBlankSpaces.length;
     let sumLength = 0
     for (let i = 0; i < arrayLength; i++) {
-      sumLength = sumLength + cleanBlankSpaces[i].length
-      console.log(sumLength);
+      sumLength = sumLength + cleanBlankSpaces[i].length;
     };
     let avgLength = sumLength / arrayLength
     document.getElementById('word-length-average').textContent = 'Longitud promedio de palabra: ' + avgLength;
@@ -70,7 +68,6 @@ export let analyzer = {
     let sumNumbers = 0;
     for (let j = 0; j < arrayNumbersLength; j++) {
       sumNumbers = parseInt(sumNumbers + onlyNumbers[j]);
-      console.log(sumNumbers);
     }
     document.getElementById('number-sum').textContent = 'Suma de todos los números en el texto: ' + sumNumbers;
     //TODO: esta función debe retornar la suma de todos los números que se encuentran en el parámetro `text` de tipo `string`.
