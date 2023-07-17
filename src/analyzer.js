@@ -4,11 +4,15 @@ export const analyzer = {
 
   getWordCount: (text) => {
     let arrayWords = text.split(' ');
-    let cleanBlankSpaces = arrayWords.filter(item => item.trim() != '');
-    let wordCount = cleanBlankSpaces.length
-    //let cleanSideSpaces = text.trim()
-    //let arrayWords = cleanSideSpaces.split(' '); //matriz donde cada miembro es una palabra (se separan con espacio)
-    //let wordCount = arrayWords.length
+    let wordCount = 0;
+    for (let i=0; i < arrayWords.length; i++) {
+      arrayWords[i] = arrayWords[i].trim()
+      if (arrayWords[i] !== ''){
+        wordCount++
+      }
+    }
+    //let cleanBlankSpaces = arrayWords.filter(item => item.trim() != '');
+    //let wordCount = cleanBlankSpaces.length
     document.querySelector('[data-testid="word-count"]').textContent = 'Palabras totales: ' + wordCount
     return wordCount;
     //TODO: esta función debe retornar el recuento de palabras que se encuentran en el parámetro `text` de tipo `string`.
