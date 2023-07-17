@@ -11,7 +11,7 @@ userText.addEventListener('keyup',() => {
     analyzer.getNumberSum(text);
 })
 
-let cleanTextContent = document.getElementById('reset-button');
+const cleanTextContent = document.getElementById('reset-button');
 cleanTextContent.addEventListener('click', () => {
     userText.value = '';
 })
