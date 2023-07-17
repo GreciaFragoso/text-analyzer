@@ -1,6 +1,6 @@
 import analyzer from './analyzer.js';
 //TODO: escuchar eventos del DOM e invocar  los métodos del objeto `analyzer`
-let userText = document.getElementById('user-input');
+let userText = document.querySelector('textarea');
 userText.addEventListener('keyup',() => {
     let text = userText.value;
     analyzer.getWordCount(text);

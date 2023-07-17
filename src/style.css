@@ -52,7 +52,7 @@ body {
     margin: auto auto;
 }
 
-textarea {
+textarea[name] {
     resize: none;
     width: 400px;
     height: 100px;
