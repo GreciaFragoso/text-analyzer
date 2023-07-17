@@ -1,73 +1,77 @@
 
-
-header {
-    color: blueviolet;
+header { 
+    background-color: black;
+    color: white;
     font-size: larger;
     font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
     text-align: center;
+    position: relative;
+    display: block;
+    height: 20vh;
+    padding: 2px 550px; /*con 550 sale en dos líneas*/
 }
 
 footer {
-    color: blueviolet;
-    font-size: small;
-    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    background-color: black;
+    color: white;
+    text-align: left;
+    font-size: smaller;
 }
 
 .parametros {
-    color:black;
+    color:white;
     font-size: medium;
     font-family: Verdana, Geneva, Tahoma, sans-serif;
-    margin: 10;
-    border-color: aqua;
-    padding: 0cm;
+    width: 600px;
+    height: 20px;
+    margin: 10px auto; /*separacion entre boxes*/
+    border: 3px solid black;
+    background-color: rgb(255, 104, 180);
+    padding: 0px;
     text-align: center;
-    list-style-type: none;
+    list-style-type: none; /*elimina viñetas*/
 }
 
-li {
-    border-color: black;
-    background-color: aquamarine;
-    margin: 10px;
-    border-width: 10px;
-    box-sizing: content-box;
-    padding: 30px;
-    height: auto;
-    width: auto;
-    /*max-width: 600px; esta línea ajusta el ancho pero anula el centrado del body*/
+#instrucciones {
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-weight: bold;
+    background-color: rgb(252, 235, 138);
+    height: 20px;
+    width: 300px;
+    margin: 0px auto;
 }
 
 .notebox {
     text-align: center;
+    justify-content: center;
 }
 
 body {
     text-align: center;
+    margin: auto auto;
 }
 
 textarea {
     resize: none;
     width: 400px;
     height: 100px;
-    border: 2px;
+    border: 5px solid black;
     text-align: center;
 }
 
 #reset-button {
     font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-weight: bold;
     background-color: rgb(255, 255, 255);
     color: black;
-    border: 2px solid#ff3d3d;
+    border: 5px solid rgb(255, 104, 180);
     padding: 14px 40px;
     border-radius: 12px;
     text-align: center;
 }
 
-footer {
-    text-align: left;
-}
-
 body, html {
-    background-image: url(https://images7.alphacoders.com/713/713678.jpg);
+    background-image: url(https://media.meer.com/attachments/a69df724392683914ecbe19ab345577b4e42347e/store/fill/1090/613/d05732e0bc283451d908633f78de0987157946619320ebbb3be66f3d2cac/Vasili-Kandinsky-Rosa-decisivo-1932.jpg);
     background-position: center center;
     background-repeat: no-repeat;
     background-attachment: fixed;
