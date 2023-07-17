@@ -15,21 +15,20 @@
   <p>Por favor, introduce tu texto en la caja</p>
   <textarea id="user-input" name="user-input" onkeyup="" placeholder="Coloca aquí tu texto"></textarea>
   <br>
+  <br>
   <button id = "reset-button">Limpiar contenido</button>
-  <script>
-  function cleanContent(){
-    let content = document.getElementById('user-input');
-    content.value = '';
-  };
-  </script>
+
   <ul>
-    <li data-testid="word-count" id = "word-count"> Palabras  totales: </li>
-    <li data-testid="character-count" id="character-count"> Caracteres totales: </li>
-    <li data-testid="character-no-spaces-count" id="character-no-spaces-count"> Caracteres totales (sin espacios): </li>
-    <li data-testid="number-count" id="number-count"> Cantidad de números en el texto: </li>
-    <li data-testid="number-sum" id="number-sum"> Suma de los  números en el texto: </li>
-    <li data-testid="word-length-average" id="word-length-average"> Longitud promedio de palabra: </li>
+    <div class="notebox">
+      <li class="parametros" data-testid="word-count" id = "word-count"> Palabras  totales: </li>
+      <li class="parametros" data-testid="character-count" id="character-count"> Caracteres totales: </li>
+      <li class="parametros" data-testid="character-no-spaces-count" id="character-no-spaces-count"> Caracteres totales (sin espacios): </li>
+      <li class="parametros" data-testid="number-count" id="number-count"> Cantidad de números en el texto: </li>
+      <li class="parametros" data-testid="number-sum" id="number-sum"> Suma de los  números en el texto: </li>
+      <li class="parametros" data-testid="word-length-average" id="word-length-average"> Longitud promedio de palabra: </li>
+    </div>
   </ul>
+
   <footer>
     <p>Grecia Fragoso, Laboratoria DEV-010</p>
   </footer>
