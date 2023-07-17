@@ -19,7 +19,7 @@ footer {
     font-size: smaller;
 }
 
-li {
+.notebox {
     color:white;
     font-size: medium;
     font-family: Verdana, Geneva, Tahoma, sans-serif;
@@ -27,6 +27,9 @@ li {
     border: 3px solid black;
     background-color: rgb(255, 104, 180);
     padding: 0px;
+}
+
+.notebox {
     text-align: center;
     list-style-type: none; /*elimina viñetas*/
     width: 600px;
@@ -42,17 +45,12 @@ li {
     margin: 0px auto;
 }
 
-.notebox {
-    text-align: center;
-    justify-content: center;
-}
-
 body {
     text-align: center;
     margin: auto auto;
 }
 
-textarea[name='user-input'] {
+textarea[name="user-input"] {
     resize: none;
     width: 400px;
     height: 100px;
