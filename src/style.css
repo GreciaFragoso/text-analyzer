@@ -19,18 +19,18 @@ footer {
     font-size: smaller;
 }
 
-.parametros {
+li {
     color:white;
     font-size: medium;
     font-family: Verdana, Geneva, Tahoma, sans-serif;
-    width: 600px;
-    height: 20px;
     margin: 10px auto; /*separacion entre boxes*/
     border: 3px solid black;
     background-color: rgb(255, 104, 180);
     padding: 0px;
     text-align: center;
     list-style-type: none; /*elimina viñetas*/
+    width: 600px;
+    height: 20px;
 }
 
 #instrucciones {
@@ -52,7 +52,7 @@ body {
     margin: auto auto;
 }
 
-textarea[name] {
+textarea[name='user-input'] {
     resize: none;
     width: 400px;
     height: 100px;

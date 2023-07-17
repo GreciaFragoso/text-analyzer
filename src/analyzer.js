@@ -1,4 +1,4 @@
-export let analyzer = {  
+export const analyzer = {  
   imprimirEnConsola: () => {
     console.log('Hola')},
 
