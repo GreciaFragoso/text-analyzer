@@ -9,7 +9,7 @@ header {
     position: relative;
     display: block;
     height: 20vh;
-    padding: 2px 550px; /*con 550 sale en dos líneas*/
+    padding: 2px 400px; /*con 550 sale en dos líneas*/
 }
 
 footer {

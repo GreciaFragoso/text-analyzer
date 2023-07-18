@@ -1,7 +1,4 @@
 export const analyzer = {  
-  imprimirEnConsola: () => {
-    console.log('Hola')},
-
   getWordCount: (text) => {
     let arrayWords = text.split(' ');
     let wordCount = 0;
@@ -14,13 +11,11 @@ export const analyzer = {
     //let cleanBlankSpaces = arrayWords.filter(item => item.trim() != '');
     //let wordCount = cleanBlankSpaces.length
     document.querySelector('[data-testid="word-count"]').textContent = 'Palabras totales: ' + wordCount
-    return wordCount;
     //TODO: esta función debe retornar el recuento de palabras que se encuentran en el parámetro `text` de tipo `string`.
   },
   getCharacterCount: (text) => {
     let characterCount = text.length;
-    document.querySelector('[data-testid="character-count"]').textContent = 'Caracteres totales: ' + characterCount
-    return characterCount;
+    document.querySelector('[data-testid="character-count"]').textContent = 'Caracteres totales: ' + characterCount;
     //TODO: esta función debe retornar el recuento de caracteres que se encuentran en el parámetro `text` de tipo `string`.
   },
   getCharacterCountExcludingSpaces: (text) => {
@@ -29,8 +24,7 @@ export const analyzer = {
     let characterCountExcludingSpaces = cleanAllBlankSpaces.length
     //let textWithoutSpaces = text.replace(/^\s+|\s+$/gm,'');
     //let characterCountExcludingSpaces = textWithoutSpaces.length;
-    document.querySelector('[data-testid="character-no-spaces-count"]').textContent = 'Caracteres totales sin espacios: ' + characterCountExcludingSpaces
-    return characterCountExcludingSpaces;
+    document.querySelector('[data-testid="character-no-spaces-count"]').textContent = 'Caracteres totales sin espacios: ' + characterCountExcludingSpaces;
     //TODO: esta función debe retornar el recuento de caracteres excluyendo espacios y signos de puntuación que se encuentran en el parámetro `text` de tipo `string`.
   },
   getAverageWordLength: (text) => {   
@@ -42,8 +36,7 @@ export const analyzer = {
       sumLength = sumLength + cleanBlankSpaces[i].length;
     };
     let avgLength = sumLength / arrayLength
-    document.querySelector('[data-testid="word-length-average"]').textContent = 'Longitud promedio de palabra: ' + avgLength;
-    return avgLength;
+    document.querySelector('[data-testid="word-length-average"]').textContent = 'Longitud promedio de palabra: ' + avgLength.toFixed(2);
     },
     //TODO: esta función debe retornar la longitud media de palabras que se encuentran en el parámetro `text` de tipo `string`.
   
