@@ -1,5 +1,5 @@
 export const analyzer = {
-    
+
   getWordCount: (text) => {
     const arrayWords = text.split(' ');
     let wordCount = 0;
@@ -11,7 +11,7 @@ export const analyzer = {
     }
     //let cleanBlankSpaces = arrayWords.filter(item => item.trim() != '');
     //let wordCount = cleanBlankSpaces.length
-    document.querySelector('[data-testid="word-count"]').textContent = 'Palabras totales: ' + wordCount
+    document.querySelector('[data-testid="word-count"]').textContent = 'Palabras totales: ' + wordCount;
     //TODO: esta función debe retornar el recuento de palabras que se encuentran en el parámetro `text` de tipo `string`.
   },
   getCharacterCount: (text) => {
@@ -59,10 +59,11 @@ export const analyzer = {
     };
     let onlyNumbers = cleanAllBlankSpaces.filter(item => !isNaN(item));
     let arrayNumbersLength = onlyNumbers.length;*/
-    document.querySelector('[data-testid="number-count"]').textContent = 'Cantidad de números en el texto: ' + numbersCount /*arrayNumbersLength;*/
+    document.querySelector('[data-testid="number-count"]').textContent = 'Cantidad de números en el texto: ' + numbersCount; /*arrayNumbersLength;*/
 
     //TODO: esta función debe retornar cúantos números se encuentran en el parámetro `text` de tipo `string`.
   },
+
   getNumberSum: (text) => {
     const arrayWords = text.split(' ');
     const cleanAllBlankSpaces = arrayWords.filter(item => item.trim() !== '');
@@ -73,10 +74,10 @@ export const analyzer = {
     const onlyNumbers = cleanAllBlankSpaces.filter(item => !isNaN(item));
     let sumNumbers = 0;
     for (let j = 0; j < onlyNumbers.length; j++) {
-      sumNumbers = parseInt(sumNumbers + onlyNumbers[j]);
+      sumNumbers = parseFloat(sumNumbers + onlyNumbers[j]);
     }
-    document.querySelector('[data-testid="number-sum"]').textContent = 'Suma de todos los números en el texto: ' + sumNumbers;
-  //TODO: esta función debe retornar la suma de todos los números que se encuentran en el parámetro `text` de tipo `string`.
+    document.querySelector('[data-testid="number-sum"]').textContent = 'Suma de todos los números en el texto: ' + sumNumbers.toFixed(2);
+  //TODO: esta función debe retornar la suma de todos los números que se encuentran en el parámetro `text` de tipo `string`.   
   }, 
 }
 
