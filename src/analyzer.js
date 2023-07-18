@@ -1,4 +1,5 @@
-export const analyzer = {  
+export const analyzer = {
+    
   getWordCount: (text) => {
     let arrayWords = text.split(' ');
     let wordCount = 0;
@@ -14,17 +15,15 @@ export const analyzer = {
     //TODO: esta función debe retornar el recuento de palabras que se encuentran en el parámetro `text` de tipo `string`.
   },
   getCharacterCount: (text) => {
-    let characterCount = text.length;
-    document.querySelector('[data-testid="character-count"]').textContent = 'Caracteres totales: ' + characterCount;
+    document.querySelector('[data-testid="character-count"]').textContent = 'Caracteres totales: ' + text.length;
     //TODO: esta función debe retornar el recuento de caracteres que se encuentran en el parámetro `text` de tipo `string`.
   },
   getCharacterCountExcludingSpaces: (text) => {
     let textArray = text.split('');
     let cleanAllBlankSpaces = textArray.filter(item => item.trim() != '')
-    let characterCountExcludingSpaces = cleanAllBlankSpaces.length
     //let textWithoutSpaces = text.replace(/^\s+|\s+$/gm,'');
     //let characterCountExcludingSpaces = textWithoutSpaces.length;
-    document.querySelector('[data-testid="character-no-spaces-count"]').textContent = 'Caracteres totales sin espacios: ' + characterCountExcludingSpaces;
+    document.querySelector('[data-testid="character-no-spaces-count"]').textContent = 'Caracteres totales sin espacios: ' + cleanAllBlankSpaces.length;
     //TODO: esta función debe retornar el recuento de caracteres excluyendo espacios y signos de puntuación que se encuentran en el parámetro `text` de tipo `string`.
   },
   getAverageWordLength: (text) => {   
@@ -61,9 +60,9 @@ export const analyzer = {
       cleanAllBlankSpaces[i] = Number(cleanAllBlankSpaces[i])
     };
     let onlyNumbers = cleanAllBlankSpaces.filter(item => !isNaN(item));
-    let arrayNumbersLength = onlyNumbers.length;
+    //let arrayNumbersLength = onlyNumbers.length;
     let sumNumbers = 0;
-    for (let j = 0; j < arrayNumbersLength; j++) {
+    for (let j = 0; j < onlyNumbers.length; j++) {
       sumNumbers = parseInt(sumNumbers + onlyNumbers[j]);
     }
     document.querySelector('[data-testid="number-sum"]').textContent = 'Suma de todos los números en el texto: ' + sumNumbers;
