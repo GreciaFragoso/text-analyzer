@@ -41,14 +41,26 @@ export const analyzer = {
   
   getNumberCount: (text) => {
     let arrayWords = text.split(' ');
-    let cleanAllBlankSpaces = arrayWords.filter(item => item.trim() != '');
+    let numbersCount = 0;
+    for (let i=0; i < arrayWords.length; i++) {
+      arrayWords[i] = arrayWords[i].trim();
+    }
+    for (let i=0; i < arrayWords.length; i++) {
+      if (arrayWords[i] !== ''){
+        arrayWords[i] = Number(arrayWords[i])
+        if (!isNaN(arrayWords[i])){
+          numbersCount++
+        }
+      }
+    } 
+    /*let cleanAllBlankSpaces = arrayWords.filter(item => item.trim() != '');
     let arrayLength = cleanAllBlankSpaces.length
     for (let i = 0; i <= arrayLength; i++) {
       cleanAllBlankSpaces[i] = Number(cleanAllBlankSpaces[i])
     };
     let onlyNumbers = cleanAllBlankSpaces.filter(item => !isNaN(item));
-    let arrayNumbersLength = onlyNumbers.length;
-    document.querySelector('[data-testid="number-count"]').textContent = 'Cantidad de números en el texto: ' + arrayNumbersLength;
+    let arrayNumbersLength = onlyNumbers.length;*/
+    document.querySelector('[data-testid="number-count"]').textContent = 'Cantidad de números en el texto: ' + numbersCount /*arrayNumbersLength;*/
 
     //TODO: esta función debe retornar cúantos números se encuentran en el parámetro `text` de tipo `string`.
   },
@@ -60,7 +72,6 @@ export const analyzer = {
       cleanAllBlankSpaces[i] = Number(cleanAllBlankSpaces[i])
     };
     let onlyNumbers = cleanAllBlankSpaces.filter(item => !isNaN(item));
-    //let arrayNumbersLength = onlyNumbers.length;
     let sumNumbers = 0;
     for (let j = 0; j < onlyNumbers.length; j++) {
       sumNumbers = parseInt(sumNumbers + onlyNumbers[j]);
