@@ -5,13 +5,6 @@
 * [1. Generalidades del producto](#1-generalidades-del-producto)
 * [2. Utilidad](#2-utilidad)
 * [3. Funcionalidades](#3-funcionalidades)
-* [4. Boilerplate](#4-boilerplate)
-* [5. Criterios de aceptación mínimos del proyecto](#5-criterios-de-aceptación-mínimos-del-proyecto)
-* [6. Pruebas](#6-pruebas)
-* [7. Pistas, tips y lecturas complementarias](#7-pistas-tips-y-lecturas-complementarias)
-* [8. Consideraciones para pedir tu Project Feedback](#8-consideraciones-para-pedir-tu-project-feedback)
-* [9. Objetivos de aprendizaje](#9-objetivos-de-aprendizaje)
-* [10. Funcionalidades opcionales](#10-funcionalidades-opcionales)
 
 ***
 
