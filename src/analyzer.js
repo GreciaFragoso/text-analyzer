@@ -10,8 +10,6 @@ export const analyzer = {
       }
     }
     return wordCount;
-    //let cleanBlankSpaces = arrayWords.filter(item => item.trim() != '');
-    //let wordCount = cleanBlankSpaces.length
     //TODO: esta función debe retornar el recuento de palabras que se encuentran en el parámetro `text` de tipo `string`.
   },
   getCharacterCount: (text) => {
@@ -26,8 +24,6 @@ export const analyzer = {
     const cleanAllBlankSpaces = textArray.filter(item => item.trim() !== '')
     const woSpaces = cleanAllBlankSpaces.length
     return woSpaces
-    //let textWithoutSpaces = text.replace(/^\s+|\s+$/gm,'');
-    //let characterCountExcludingSpaces = textWithoutSpaces.length;
     //TODO: esta función debe retornar el recuento de caracteres excluyendo espacios y signos de puntuación que se encuentran en el parámetro `text` de tipo `string`.
   },
   getAverageWordLength: (text) => {   
@@ -43,6 +39,7 @@ export const analyzer = {
     return parseFloat(decimal);
   },
   //TODO: esta función debe retornar la longitud media de palabras que se encuentran en el parámetro `text` de tipo `string`.
+  
   getNumberCount: (text) => {
     const arrayWords = text.split(' ');
     let numbersCount = 0;
@@ -58,13 +55,6 @@ export const analyzer = {
       }
     } 
     return numbersCount
-    /*let cleanAllBlankSpaces = arrayWords.filter(item => item.trim() != '');
-    let arrayLength = cleanAllBlankSpaces.length
-    for (let i = 0; i <= arrayLength; i++) {
-      cleanAllBlankSpaces[i] = Number(cleanAllBlankSpaces[i])
-    };
-    let onlyNumbers = cleanAllBlankSpaces.filter(item => !isNaN(item));
-    let arrayNumbersLength = onlyNumbers.length;*/
     //TODO: esta función debe retornar cúantos números se encuentran en el parámetro `text` de tipo `string`.
   },
 
